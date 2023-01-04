@@ -1,0 +1,10 @@
+git diff: diff btw old n new changes in file
+Git show: diff btw commit
+git checkout: cng branch
+git reset --soft-Head~
+git branch
+git branch -m   "nn" : change current name
+git checkout branch name: changes the existing branch with provided one
+git checkout -b branch name: create a new branch of provided name and changes existing one
+git remote add origin link
+git-scm.com/docs
