@@ -8,3 +8,5 @@ git checkout branch name: changes the existing branch with provided one
 git checkout -b branch name: create a new branch of provided name and changes existing one
 git remote add origin link
 git-scm.com/docs
+git init
+git clone
