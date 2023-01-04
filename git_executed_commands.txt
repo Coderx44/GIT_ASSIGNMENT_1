@@ -1,0 +1,714 @@
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1
+$ git init
+Initialized empty Git repository in C:/Users/bhosa/OneDrive/Desktop/GIT_Assignment_1/.git/
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ touch demo.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ touch ss.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo.txt
+        ss.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git commit -m "created 2 files, demo and ss"
+[main (root-commit) 3757ab1] created 2 files, demo and ss
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 demo.txt
+ create mode 100644 ss.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git branch
+* main
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git branch working_area_1
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git branch
+* main
+  working_area_1
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git branch working_area_2
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git branch
+* main
+  working_area_1
+  working_area_2
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git checkout branch working_area_1
+error: pathspec 'branch' did not match any file(s) known to git
+error: pathspec 'working_area_1' did not match any file(s) known to git
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git checkout working_area_1
+Switched to branch 'working_area_1'
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ ls
+demo.txt  ss.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git commit -m "Added some initial changes in the demo file"
+[working_area_1 2ced690] Added some initial changes in the demo file
+ 1 file changed, 1 insertion(+)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git branch main
+fatal: A branch named 'main' already exists.
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git checkout main
+Switched to branch 'main'
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git checkout working_area_1
+Switched to branch 'working_area_1'
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ss.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git commit -am "This is the initial edit for this file"
+[working_area_1 6d6e307] This is the initial edit for this file
+ 1 file changed, 1 insertion(+)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ touch test.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git commit -am "added few git commands to test.txt"
+On branch working_area_1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git commit -m "added few git commands to test.txt"
+[working_area_1 4c528d8] added few git commands to test.txt
+ 1 file changed, 7 insertions(+)
+ create mode 100644 test.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git log
+commit 4c528d8223ae3df96f7526b5f22f2c0b9813e9d0 (HEAD -> working_area_1)
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Wed Jan 4 12:21:42 2023 +0530
+
+    added few git commands to test.txt
+
+commit 6d6e3075573cfb28e55366a3b37e798de170eb7c
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Wed Jan 4 12:18:32 2023 +0530
+
+    This is the initial edit for this file
+
+commit 2ced690dc16a86573371118f706625f51be9bca5
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Wed Jan 4 12:15:12 2023 +0530
+
+    Added some initial changes in the demo file
+
+commit 3757ab1d7055befa6c65fadcf300ad090ca009a0 (working_area_2, main)
+Author: Prasad <bhosaleprasad849@gmail.com>
+Date:   Wed Jan 4 12:09:19 2023 +0530
+
+    created 2 files, demo and ss
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git checkout branch working_area_2
+error: pathspec 'branch' did not match any file(s) known to git
+error: pathspec 'working_area_2' did not match any file(s) known to git
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git checkout working_area_2
+Switched to branch 'working_area_2'
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ ls
+demo.txt  ss.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git commit -m "Added initial comments to the demo file in 2nd branch"
+[working_area_2 d691f8f] Added initial comments to the demo file in 2nd branch
+ 1 file changed, 1 insertion(+)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ touch git_commands.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_commands.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git_commands.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git commit -m "Added few git commands to git_commands.txt"
+[working_area_2 bf33d72] Added few git commands to git_commands.txt
+ 1 file changed, 10 insertions(+)
+ create mode 100644 git_commands.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ss.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git commit -m "added some initial text to the ss.txt file in 2nd branch"
+[working_area_2 989e5ef] added some initial text to the ss.txt file in 2nd branch
+ 1 file changed, 1 insertion(+)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git diff
+diff --git a/demo.txt b/demo.txt
+index 66ea2f6..74b505a 100644
+--- a/demo.txt
++++ b/demo.txt
+@@ -1 +1,2 @@
+-this is the demo file for 2nd branch.
+\ No newline at end of file
++this is the demo file for 2nd branch.
++this is the updated file.
+\ No newline at end of file
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git log --oneline
+989e5ef (HEAD -> working_area_2) added some initial text to the ss.txt file in 2nd branch
+bf33d72 Added few git commands to git_commands.txt
+d691f8f Added initial comments to the demo file in 2nd branch
+3757ab1 (main) created 2 files, demo and ss
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+        modified:   ss.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git add demo.txt
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git commit -m "demo file edited in 2nd branch"
+[working_area_2 a189510] demo file edited in 2nd branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ss.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git lof --oneline
+git: 'lof' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git log --oneline
+a189510 (HEAD -> working_area_2) demo file edited in 2nd branch
+989e5ef added some initial text to the ss.txt file in 2nd branch
+bf33d72 Added few git commands to git_commands.txt
+d691f8f Added initial comments to the demo file in 2nd branch
+3757ab1 (main) created 2 files, demo and ss
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ss.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git reset --soft HEAD~2
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git log --oneline
+bf33d72 (HEAD -> working_area_2) Added few git commands to git_commands.txt
+d691f8f Added initial comments to the demo file in 2nd branch
+3757ab1 (main) created 2 files, demo and ss
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   demo.txt
+        modified:   ss.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ss.txt
+
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   demo.txt
+        modified:   ss.txt
+
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git commit -m "applied soft reset"
+[working_area_2 1e26440] applied soft reset
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git log --oneline
+1e26440 (HEAD -> working_area_2) applied soft reset
+bf33d72 Added few git commands to git_commands.txt
+d691f8f Added initial comments to the demo file in 2nd branch
+3757ab1 (main) created 2 files, demo and ss
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_commands.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git stash
+Saved working directory and index state WIP on working_area_2: 1e26440 applied soft reset
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git stash pop
+On branch working_area_2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_commands.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (effd27d1c2de13230f8134bbc2f462045473ef9e)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git commit -m "added additional git commands to git_commands.txt"
+[working_area_2 8d7517d] added additional git commands to git_commands.txt
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git status
+On branch working_area_2
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_2)
+$ git checkout working_area_1
+Switched to branch 'working_area_1'
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git status
+On branch working_area_1
+nothing to commit, working tree clean
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git log --online
+fatal: unrecognized argument: --online
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git log --oneline
+4c528d8 (HEAD -> working_area_1) added few git commands to test.txt
+6d6e307 This is the initial edit for this file
+2ced690 Added some initial changes in the demo file
+3757ab1 (main) created 2 files, demo and ss
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git reset --hard HEAD~2
+HEAD is now at 2ced690 Added some initial changes in the demo file
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git log --oneline
+2ced690 (HEAD -> working_area_1) Added some initial changes in the demo file
+3757ab1 (main) created 2 files, demo and ss
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git remote add origin git@github.com:Coderx44/GIT_ASSIGNMENT_1.git
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (working_area_1)
+$ git checkout main
+Switched to branch 'main'
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git push -u origin main
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git remote add origin git@github.com:Coderx44/GIT_ASSIGNMENT_1.git
+error: remote origin already exists.
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git branch -M main
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git push origin main
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git remote add handler https://github.com/Coderx44/GIT_ASSIGNMENT_1.git
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git push handler main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 230 bytes | 230.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Coderx44/GIT_ASSIGNMENT_1.git
+ * [new branch]      main -> main
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git push -u handler working_area_1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes | 162.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'working_area_1' on GitHub by visiting:
+remote:      https://github.com/Coderx44/GIT_ASSIGNMENT_1/pull/new/working_area_1
+remote:
+To https://github.com/Coderx44/GIT_ASSIGNMENT_1.git
+ * [new branch]      working_area_1 -> working_area_1
+Branch 'working_area_1' set up to track remote branch 'working_area_1' from 'handler'.
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git push -u handler working_area_2
+Enumerating objects: 16, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 1.44 KiB | 368.00 KiB/s, done.
+Total 13 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'working_area_2' on GitHub by visiting:
+remote:      https://github.com/Coderx44/GIT_ASSIGNMENT_1/pull/new/working_area_2
+remote:
+To https://github.com/Coderx44/GIT_ASSIGNMENT_1.git
+ * [new branch]      working_area_2 -> working_area_2
+Branch 'working_area_2' set up to track remote branch 'working_area_2' from 'handler'.
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+        modified:   ss.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git commit -m "changes added to demo.txt and ss.txt in main branch"
+[main a22b5aa] changes added to demo.txt and ss.txt in main branch
+ 2 files changed, 2 insertions(+)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git push -u handler main
+Enumerating objects: 7, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 375 bytes | 187.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Coderx44/GIT_ASSIGNMENT_1.git
+   3757ab1..a22b5aa  main -> main
+Branch 'main' set up to track remote branch 'main' from 'handler'.
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'handler/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git_page1.png
+        Git_page10.png
+        Git_page11.png
+        Git_page12.png
+        Git_page13.png
+        Git_page7.png
+        git_page2.png
+        git_page3.png
+        git_page4.png
+        git_page5.png
+        git_page6.png
+        git_page8.png
+        git_page9.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git add .
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git commit -m "added the commands executed for the assignment"
+[main 276c557] added the commands executed for the assignment
+ 13 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Git_page1.png
+ create mode 100644 Git_page10.png
+ create mode 100644 Git_page11.png
+ create mode 100644 Git_page12.png
+ create mode 100644 Git_page13.png
+ create mode 100644 Git_page7.png
+ create mode 100644 git_page2.png
+ create mode 100644 git_page3.png
+ create mode 100644 git_page4.png
+ create mode 100644 git_page5.png
+ create mode 100644 git_page6.png
+ create mode 100644 git_page8.png
+ create mode 100644 git_page9.png
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$ git push handler main
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 1.18 MiB | 1.09 MiB/s, done.
+Total 15 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Coderx44/GIT_ASSIGNMENT_1.git
+   a22b5aa..276c557  main -> main
+
+bhosa@LAPTOP-V8ADCT3C MINGW64 ~/OneDrive/Desktop/GIT_Assignment_1 (main)
+$
